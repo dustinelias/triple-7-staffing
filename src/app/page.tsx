@@ -1,103 +1,108 @@
+"use client";
+
+import { useEffect } from "react";
 import Image from "next/image";
+import Navigation from "@/components/Navigation";
+import SmoothScroll from "@/components/SmoothScroll";
+import gsap from "gsap";
+import { CustomEase } from "gsap/CustomEase";
+import { SplitText } from "gsap/SplitText";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  useEffect(() => {
+    console.log("🏠 [Home] Component mounted");
+    gsap.registerPlugin(CustomEase, SplitText);
+    CustomEase.create("hop", ".87,0,.13,1");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    const container = document.querySelector(".container");
+    console.log("📦 [Home] Container found:", !!container);
+    
+    // Fade in container
+    gsap.set(container, { opacity: 0 });
+    console.log("👻 [Home] Container set to opacity: 0");
+    
+    gsap.to(container, {
+      opacity: 1,
+      duration: 0.5,
+      ease: "power2.out",
+      onStart: () => console.log("✨ [Home] Container fade-in START"),
+      onComplete: () => console.log("✅ [Home] Container fade-in COMPLETE"),
+    });
+
+    // Animate hero text on load
+    const heroTitle = document.querySelector(".hero h1");
+    if (heroTitle) {
+      const titleText = heroTitle.textContent;
+      console.log("📝 [Home] Found hero title:", titleText?.substring(0, 30) + "...");
+      
+      const heroSplit = SplitText.create(heroTitle as HTMLElement, {
+        type: "lines,words",
+        linesClass: "line-parent",
+      });
+      
+      gsap.set(heroTitle, { perspective: 400 });
+      gsap.set(heroSplit.words, { 
+        opacity: 0,
+        y: 100,
+        rotateX: -90,
+      });
+      console.log("🔤 [Home] Split words prepared:", heroSplit.words.length);
+
+      gsap.to(heroSplit.words, {
+        opacity: 1,
+        y: 0,
+        rotateX: 0,
+        duration: 1.2,
+        ease: "hop",
+        stagger: 0.02,
+        delay: 0.3,
+        onStart: () => console.log("🎨 [Home] Text animation START"),
+        onComplete: () => console.log("✅ [Home] Text animation COMPLETE"),
+      });
+    }
+  }, []);
+
+  return (
+    <>
+      <SmoothScroll />
+      <Navigation />
+      <div className="container relative translate-y-0 bg-[#171717] text-white w-full min-w-full opacity-0" data-page-content>
+        <section className="hero relative w-full min-w-full h-screen px-12 py-8 md:px-16 flex flex-col justify-center items-center overflow-hidden -z-10">
+          <h1 className="w-3/4 max-lg:w-full text-[7.5rem] max-lg:text-5xl font-medium tracking-[-0.2rem] max-lg:tracking-tight leading-none">
+            Exceptional crew for exceptional production
+          </h1>
+          
+          {/* Client Logos Marquee */}
+          <div className="absolute bottom-20 left-0 w-full flex flex-col items-center gap-8">
+            <p className="text-white/50 text-sm uppercase tracking-[0.2em]">Proudly trusted by</p>
+            <div className="logo-marquee-container relative w-full overflow-hidden">
+              {/* Fade masks - aligned with hero text edges (22.5% + padding for 55% content) */}
+              <div className="absolute left-0 top-0 h-full w-[calc(28.5%+48px)] md:w-[calc(28.5%+64px)] z-10 bg-gradient-to-r from-[#171717] via-[#171717] to-transparent pointer-events-none" />
+              <div className="absolute right-0 top-0 h-full w-[calc(28.5%+48px)] md:w-[calc(28.5%+64px)] z-10 bg-gradient-to-l from-[#171717] via-[#171717] to-transparent pointer-events-none" />
+              
+              {/* Scrolling logos - duplicated for seamless loop */}
+              <div className="logo-marquee flex items-center gap-20">
+                {/* First set of logos */}
+                <div className="logo-marquee-content flex items-center gap-20 shrink-0">
+                  <Image src="/client-logos.png" alt="Client logos" width={1200} height={72} className="h-[72px] w-auto object-contain opacity-70" />
+                </div>
+                {/* Duplicate for seamless infinite scroll */}
+                <div className="logo-marquee-content flex items-center gap-20 shrink-0">
+                  <Image src="/client-logos.png" alt="Client logos" width={1200} height={72} className="h-[72px] w-auto object-contain opacity-70" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="banner relative w-full min-w-full h-screen px-12 py-8 md:px-16 flex justify-center items-center overflow-hidden -z-10">
+          <Image src="/hero.jpg" alt="Hero background" fill className="object-cover opacity-50" />
+        </section>
+        <section className="outro relative w-full min-w-full h-screen px-12 py-8 md:px-16 flex justify-center items-center overflow-hidden -z-10">
+          <h1 className="w-3/4 max-lg:w-full text-[7.5rem] max-lg:text-5xl font-medium tracking-[-0.2rem] max-lg:tracking-tight leading-none">
+            Where talent meets opportunity
+          </h1>
+        </section>
+      </div>
+    </>
   );
 }
