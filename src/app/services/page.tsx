@@ -105,10 +105,10 @@ export default function Services() {
       <Navigation />
       <PageTransition>
         {/* Hero Section */}
-        <section className="relative w-full min-h-screen px-8 md:px-16 pt-32 pb-20 flex flex-col justify-center">
+        <section className="relative w-full min-h-screen px-6 sm:px-8 md:px-16 pt-24 sm:pt-32 pb-20 flex flex-col justify-center">
           <div className="max-w-7xl mx-auto w-full">
-            <p className="text-[#5f5f5f] text-lg mb-4 tracking-wide">What we do</p>
-            <h1 className="text-[6rem] max-lg:text-5xl max-md:text-4xl font-medium tracking-[-0.15rem] max-lg:tracking-tight leading-[0.9]">
+            <p className="text-[#5f5f5f] text-base sm:text-lg mb-4 tracking-wide">What we do</p>
+            <h1 className="text-[clamp(2rem,7vw,6rem)] font-medium tracking-tight lg:tracking-[-0.15rem] leading-[1]">
               Production crews<br />
               <span className="text-[#5f5f5f]">without the hassle</span>
             </h1>
@@ -119,30 +119,30 @@ export default function Services() {
         </section>
 
         {/* Services Grid */}
-        <section ref={cardsRef} className="relative w-full px-8 md:px-16 py-20">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        <section ref={cardsRef} className="relative w-full px-6 sm:px-8 md:px-16 py-12 sm:py-20">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
             {/* Production Types Card */}
-            <div className="service-card group relative p-8 md:p-12 border border-[#2a2a2a] rounded-sm bg-[#0f0f0f]/50 hover:bg-[#1a1a1a] hover:border-[#3a3a3a] transition-all duration-500">
+            <div className="service-card group relative p-6 sm:p-8 md:p-12 border border-[#2a2a2a] rounded-sm bg-[#0f0f0f]/50 hover:bg-[#1a1a1a] hover:border-[#3a3a3a] transition-all duration-500">
               {/* Card number */}
-              <span className="absolute top-8 right-8 md:top-12 md:right-12 text-[5rem] md:text-[7rem] font-bold text-[#1f1f1f] group-hover:text-[#2a2a2a] transition-colors duration-500 leading-none select-none">
+              <span className="absolute top-6 right-6 sm:top-8 sm:right-8 md:top-12 md:right-12 text-[3rem] sm:text-[5rem] md:text-[7rem] font-bold text-[#1f1f1f] group-hover:text-[#2a2a2a] transition-colors duration-500 leading-none select-none">
                 01
               </span>
               
               {/* Content */}
               <div className="relative z-10">
-                <p className="text-[#5f5f5f] text-sm uppercase tracking-[0.2em] mb-6">What We Do</p>
+                <p className="text-[#5f5f5f] text-xs sm:text-sm uppercase tracking-[0.2em] mb-4 sm:mb-6">What We Do</p>
                 
                 {/* Production types as prominent list */}
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2 sm:gap-3">
                   {productionTypes.map((item, index) => (
                     <div
                       key={item}
-                      className="group/item flex items-center gap-4 py-2 border-b border-[#2a2a2a] last:border-b-0 hover:border-[#3a3a3a] transition-all duration-300"
+                      className="group/item flex items-center gap-3 sm:gap-4 py-1.5 sm:py-2 border-b border-[#2a2a2a] last:border-b-0 hover:border-[#3a3a3a] transition-all duration-300"
                     >
-                      <span className="text-[#3a3a3a] text-sm font-medium w-6">
+                      <span className="text-[#3a3a3a] text-xs sm:text-sm font-medium w-5 sm:w-6">
                         {String(index + 1).padStart(2, '0')}
                       </span>
-                      <span className="text-xl md:text-2xl font-medium text-white/80 group-hover/item:text-white group-hover/item:translate-x-2 transition-all duration-300">
+                      <span className="text-base sm:text-xl md:text-2xl font-medium text-white/80 group-hover/item:text-white group-hover/item:translate-x-2 transition-all duration-300">
                         {item}
                       </span>
                     </div>
@@ -152,27 +152,27 @@ export default function Services() {
             </div>
 
             {/* Crew Positions Card */}
-            <div className="service-card group relative p-8 md:p-12 border border-[#2a2a2a] rounded-sm bg-[#0f0f0f]/50 hover:bg-[#1a1a1a] hover:border-[#3a3a3a] transition-all duration-500">
+            <div className="service-card group relative p-6 sm:p-8 md:p-12 border border-[#2a2a2a] rounded-sm bg-[#0f0f0f]/50 hover:bg-[#1a1a1a] hover:border-[#3a3a3a] transition-all duration-500">
               {/* Card number */}
-              <span className="absolute top-8 right-8 md:top-12 md:right-12 text-[5rem] md:text-[7rem] font-bold text-[#1f1f1f] group-hover:text-[#2a2a2a] transition-colors duration-500 leading-none select-none">
+              <span className="absolute top-6 right-6 sm:top-8 sm:right-8 md:top-12 md:right-12 text-[3rem] sm:text-[5rem] md:text-[7rem] font-bold text-[#1f1f1f] group-hover:text-[#2a2a2a] transition-colors duration-500 leading-none select-none">
                 {workerPositions.id}
               </span>
               
               {/* Content */}
               <div className="relative z-10">
-                <p className="text-[#5f5f5f] text-sm uppercase tracking-[0.2em] mb-6">Who We Place</p>
+                <p className="text-[#5f5f5f] text-xs sm:text-sm uppercase tracking-[0.2em] mb-4 sm:mb-6">Who We Place</p>
                 
                 {/* Crew positions as prominent list */}
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-col gap-2 sm:gap-3">
                   {workerPositions.items.map((item, index) => (
                     <div
                       key={item}
-                      className="group/item flex items-center gap-4 py-2 border-b border-[#2a2a2a] last:border-b-0 hover:border-[#3a3a3a] transition-all duration-300"
+                      className="group/item flex items-center gap-3 sm:gap-4 py-1.5 sm:py-2 border-b border-[#2a2a2a] last:border-b-0 hover:border-[#3a3a3a] transition-all duration-300"
                     >
-                      <span className="text-[#3a3a3a] text-sm font-medium w-6">
+                      <span className="text-[#3a3a3a] text-xs sm:text-sm font-medium w-5 sm:w-6">
                         {String(index + 1).padStart(2, '0')}
                       </span>
-                      <span className="text-xl md:text-2xl font-medium text-white/80 group-hover/item:text-white group-hover/item:translate-x-2 transition-all duration-300">
+                      <span className="text-base sm:text-xl md:text-2xl font-medium text-white/80 group-hover/item:text-white group-hover/item:translate-x-2 transition-all duration-300">
                         {item}
                       </span>
                     </div>
@@ -193,10 +193,10 @@ export default function Services() {
         </div>
 
         {/* CTA Section */}
-        <section ref={ctaRef} className="relative w-full min-h-[70vh] px-8 md:px-16 py-20 flex items-center justify-center">
+        <section ref={ctaRef} className="relative w-full min-h-[70vh] px-6 sm:px-8 md:px-16 py-20 flex items-center justify-center">
           <div className="text-center max-w-3xl">
-            <p className="text-[#5f5f5f] text-lg mb-6 tracking-wide">Ready to staff your next production?</p>
-            <h2 className="text-[4rem] max-lg:text-4xl max-md:text-3xl font-medium tracking-[-0.1rem] leading-[1.1] mb-12">
+            <p className="text-[#5f5f5f] text-base sm:text-lg mb-6 tracking-wide">Ready to staff your next production?</p>
+            <h2 className="text-[clamp(1.75rem,5vw,4rem)] font-medium tracking-tight lg:tracking-[-0.1rem] leading-[1.1] mb-12">
               Let&apos;s build your<br />
               <span className="text-[#5f5f5f]">dream crew</span>
             </h2>

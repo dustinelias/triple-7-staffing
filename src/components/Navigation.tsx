@@ -283,74 +283,74 @@ export default function Navigation() {
             <div className="menu-content-main absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 max-lg:w-full p-8 flex items-end gap-8 max-lg:flex-col max-lg:items-start max-lg:gap-20">
               <div className="menu-col flex flex-col gap-2 flex-[3]">
                 <div className="menu-link">
-                  <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="text-[3.5rem] max-lg:text-5xl font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
+                  <Link href="/" onClick={(e) => handleLinkClick(e, "/")} className="text-2xl sm:text-4xl lg:text-[3.5rem] font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
                     Home
                   </Link>
                 </div>
                 <div className="menu-link">
-                  <Link href="/services" onClick={(e) => handleLinkClick(e, "/services")} className="text-[3.5rem] max-lg:text-5xl font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
+                  <Link href="/services" onClick={(e) => handleLinkClick(e, "/services")} className="text-2xl sm:text-4xl lg:text-[3.5rem] font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
                     Services
                   </Link>
                 </div>
                 <div className="menu-link">
-                  <Link href="/about" onClick={(e) => handleLinkClick(e, "/about")} className="text-[3.5rem] max-lg:text-5xl font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
+                  <Link href="/about" onClick={(e) => handleLinkClick(e, "/about")} className="text-2xl sm:text-4xl lg:text-[3.5rem] font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
                     About
                   </Link>
                 </div>
                 <div className="menu-link">
-                  <Link href="/contact" onClick={(e) => handleLinkClick(e, "/contact")} className="text-[3.5rem] max-lg:text-5xl font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
+                  <Link href="/contact" onClick={(e) => handleLinkClick(e, "/contact")} className="text-2xl sm:text-4xl lg:text-[3.5rem] font-medium leading-tight no-underline text-white/70 hover:text-white hover:translate-x-2 transition-all duration-300 ease-out inline-block">
                     Contact
                   </Link>
                 </div>
               </div>
 
-              <div className="menu-col flex flex-col gap-2 flex-[2]">
+              <div className="menu-col flex flex-col gap-1 sm:gap-2 flex-[2]">
                 <div className="menu-tag">
-                  <span className="text-2xl max-lg:text-xl font-medium text-[#5f5f5f] ">
+                  <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Creative Production
                   </span>
                 </div>
                 <div className="menu-tag">
-                  <span className="text-2xl max-lg:text-xl font-medium text-[#5f5f5f]">
+                  <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Immersive / Experiential
                   </span>
                 </div>
                 <div className="menu-tag">
-                  <span className="text-2xl max-lg:text-xl font-medium text-[#5f5f5f]">
+                  <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Photo Shoots & Motion
                   </span>
                 </div>
                 <div className="menu-tag">
-                  <span className="text-2xl max-lg:text-xl font-medium text-[#5f5f5f]">
+                  <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Fabrication
                   </span>
                 </div>
                 <div className="menu-tag">
-                  <span className="text-2xl max-lg:text-xl font-medium text-[#5f5f5f]">
+                  <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Events
                   </span>
                 </div>
                 <div className="menu-tag">
-                  <span className="text-2xl max-lg:text-xl font-medium text-[#5f5f5f]">
+                  <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Pop Ups
                   </span>
                 </div>
                 <div className="menu-tag">
-                  <span className="text-2xl max-lg:text-xl font-medium text-[#5f5f5f]">
+                  <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Runway Shows
                   </span>
                 </div>
               </div>
             </div>
-            <div className="menu-footer mx-auto w-3/4 max-lg:w-full p-8 flex items-end gap-8">
-              <div className="menu-col flex flex-col gap-2 flex-[3]">
-                <p className="text-[0.95rem] font-medium text-[#5f5f5f]">New York</p>
-                <p className="text-[0.95rem] font-medium text-[#5f5f5f]">Los Angeles</p>
-                <p className="text-[0.95rem] font-medium text-[#5f5f5f]">San Francisco</p>
+            <div className="menu-footer mx-auto w-3/4 max-lg:w-full p-4 sm:p-8 flex items-end gap-4 sm:gap-8">
+              <div className="menu-col flex flex-col gap-1 sm:gap-2 flex-[3]">
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">New York</p>
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">Los Angeles</p>
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">San Francisco</p>
               </div>
-              <div className="menu-col flex flex-col gap-2 flex-[2]">
-                <p className="text-[0.95rem] font-medium text-[#5f5f5f]">+1 917 767 4005</p>
-                <p className="text-[0.95rem] font-medium text-[#5f5f5f]">dustinelias1@gmail.com</p>
+              <div className="menu-col flex flex-col gap-1 sm:gap-2 flex-[2]">
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">+1 917 767 4005</p>
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">dustinelias1@gmail.com</p>
               </div>
             </div>
           </div>

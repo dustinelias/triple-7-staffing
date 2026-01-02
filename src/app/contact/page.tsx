@@ -14,13 +14,13 @@ export default function Contact() {
       />
       <PageTransition>
         {/* Hero Section */}
-        <section className="relative w-full px-8 md:px-16 pt-32 pb-8 flex flex-col justify-center">
+        <section className="relative w-full px-6 sm:px-8 md:px-16 pt-24 sm:pt-32 pb-8 flex flex-col justify-center">
           <div className="max-w-7xl mx-auto w-full">
-            <p className="text-[#5f5f5f] text-lg mb-4 tracking-wide">Get in touch</p>
-            <h1 className="text-[4.5rem] max-lg:text-5xl max-md:text-4xl font-medium tracking-[-0.15rem] max-lg:tracking-tight leading-[1.05] mb-6">
+            <p className="text-[#5f5f5f] text-base sm:text-lg mb-4 tracking-wide">Get in touch</p>
+            <h1 className="text-[clamp(2rem,6vw,4.5rem)] font-medium tracking-tight lg:tracking-[-0.15rem] leading-[1.1] mb-6">
               Let&apos;s work <span className="text-[#5f5f5f]">together</span>
             </h1>
-            <p className="text-[#8f8f8f] text-lg max-w-xl leading-relaxed">
+            <p className="text-[#8f8f8f] text-base sm:text-lg max-w-xl leading-relaxed">
               Book a 30-minute call to discuss your production needs. We&apos;ll match you with the perfect crew.
             </p>
           </div>
@@ -38,23 +38,23 @@ export default function Contact() {
         </section>
 
         {/* Contact Info */}
-        <section className="relative w-full px-8 md:px-16 py-20">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <section className="relative w-full px-6 sm:px-8 md:px-16 py-12 sm:py-20">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
             <div>
-              <h3 className="text-[#5f5f5f] text-sm tracking-widest uppercase mb-4">Email</h3>
-              <a href="mailto:hello@tripleseven.com" className="text-xl hover:text-[#00cbff] transition-colors duration-300">
+              <h3 className="text-[#5f5f5f] text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">Email</h3>
+              <a href="mailto:dustinelias1@gmail.com" className="text-base sm:text-xl hover:text-[#00cbff] transition-colors duration-300">
                 dustinelias1@gmail.com
               </a>
             </div>
             <div>
-              <h3 className="text-[#5f5f5f] text-sm tracking-widest uppercase mb-4">Phone</h3>
-              <a href="tel:+1917 674005" className="text-xl hover:text-[#00cbff] transition-colors duration-300">
+              <h3 className="text-[#5f5f5f] text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">Phone</h3>
+              <a href="tel:+19177674005" className="text-base sm:text-xl hover:text-[#00cbff] transition-colors duration-300">
                 +1 917 767 4005
               </a>
             </div>
             <div>
-              <h3 className="text-[#5f5f5f] text-sm tracking-widest uppercase mb-4">Locations</h3>
-              <p className="text-xl text-[#8f8f8f]">New York · Los Angeles · San Francisco</p>
+              <h3 className="text-[#5f5f5f] text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">Locations</h3>
+              <p className="text-base sm:text-xl text-[#8f8f8f]">New York · Los Angeles · San Francisco</p>
             </div>
           </div>
         </section>
