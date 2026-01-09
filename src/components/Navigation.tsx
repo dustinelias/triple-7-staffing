@@ -345,6 +345,10 @@ export default function Navigation() {
             <div className="menu-footer mx-auto w-3/4 max-lg:w-full p-4 sm:p-8 flex items-end gap-4 sm:gap-8">
               <div className="menu-col flex flex-col gap-1 sm:gap-2 flex-[3]">
                 <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">New York</p>
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">Miami</p>
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">Tampa</p>
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">Austin</p>
+                <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">Chicago</p>
                 <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">Los Angeles</p>
                 <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">San Francisco</p>
               </div>

@@ -54,7 +54,7 @@ export default function Contact() {
             </div>
             <div>
               <h3 className="text-[#5f5f5f] text-xs sm:text-sm tracking-widest uppercase mb-3 sm:mb-4">Locations</h3>
-              <p className="text-base sm:text-xl text-[#8f8f8f]">New York · Los Angeles · San Francisco</p>
+              <p className="text-base sm:text-xl text-[#8f8f8f]">NYC · MIA · TPA · ATX · CHI · LA · SF</p>
             </div>
           </div>
         </section>
