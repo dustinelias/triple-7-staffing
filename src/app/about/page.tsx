@@ -128,7 +128,7 @@ export default function About() {
                 <span className="text-[#3a3a3a] text-sm font-medium mb-4 block">01</span>
                 <h3 className="text-xl sm:text-2xl font-medium mb-4">Curated Teams</h3>
                 <p className="text-[#8f8f8f] leading-relaxed">
-                  Every crew member is hand-selected to match your project's specific needs and creative vision.
+                  Every crew member is hand-selected to match your project&apos;s specific needs and creative vision.
                 </p>
               </div>
               <div>
