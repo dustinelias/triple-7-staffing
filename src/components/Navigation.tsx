@@ -304,7 +304,7 @@ export default function Navigation() {
                 </div>
               </div>
 
-              <div className="menu-col flex flex-col gap-1 sm:gap-2 flex-[2]">
+              <div className="menu-col hidden sm:flex flex-col gap-1 sm:gap-2 flex-[2]">
                 <div className="menu-tag">
                   <span className="text-sm sm:text-lg lg:text-2xl font-medium text-[#5f5f5f]">
                     Creative Production
@@ -342,7 +342,7 @@ export default function Navigation() {
                 </div>
               </div>
             </div>
-            <div className="menu-footer mx-auto w-3/4 max-lg:w-full p-4 sm:p-8 flex items-end gap-4 sm:gap-8">
+            <div className="menu-footer mx-auto w-3/4 max-lg:w-full p-4 pl-8 sm:p-8 flex items-end gap-4 sm:gap-8">
               <div className="menu-col flex flex-col gap-1 sm:gap-2 flex-[3]">
                 <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">New York</p>
                 <p className="text-xs sm:text-[0.95rem] font-medium text-[#5f5f5f]">Miami</p>
